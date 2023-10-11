@@ -27,9 +27,7 @@ function ProductPageComp() {
   };
 
   const addToCart = () => {
-    console.log("product added to cart ", product);
     dispatch({ type: "ADD", payload: product });
-    // dispatch({ type: "ADDTOCART", payload: product.price });
   };
   const ratingStars = () => {
     const starts = [];

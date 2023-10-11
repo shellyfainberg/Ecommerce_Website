@@ -13,7 +13,6 @@ function SecondStepPageComp() {
 
   const nextPage = (e) => {
     e.preventDefault();
-    console.log("form submited");
     sessionStorage["userDetails"] = JSON.stringify(userDetails);
     navigate("/checkout/3");
   };

@@ -7,7 +7,6 @@ action - an object with 2 fields:
 export default function appReducer(state = [], action) {
   switch (action.type) {
     case "ADD":
-      console.log("state", state);
       return [...state, action.payload];
     case "DELETE":
       return state.filter((product) => product.id != action.payload);

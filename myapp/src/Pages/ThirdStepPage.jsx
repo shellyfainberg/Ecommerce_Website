@@ -20,7 +20,6 @@ function ThirdStepPageComp() {
     let total = 0;
     cartProducts.forEach((product) => {
       total += product.price;
-      console.log("ppp", product, total);
     });
     setTotalPrice(total);
   }, []);
@@ -31,7 +30,6 @@ function ThirdStepPageComp() {
         <h2>Order Details:</h2>
         <table>
           <thead></thead>
-          {console.log(cartProducts)}
           {cartProducts.map((pro) => {
             return (
               <tbody key={pro.id}>

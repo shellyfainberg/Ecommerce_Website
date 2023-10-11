@@ -10,7 +10,6 @@ function FirstStepPageComp() {
 
   const next = () => {
     sessionStorage["userDetails"] = JSON.stringify(userDetails);
-    console.log("userDetails", userDetails);
     navigate("2");
   };
   return (

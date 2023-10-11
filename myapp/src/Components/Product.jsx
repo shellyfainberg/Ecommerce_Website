@@ -6,7 +6,6 @@ function ProductComp(props) {
   const dispatch = useDispatch();
 
   const addToCart = (product) => {
-    // console.log("pro", product);
     dispatch({ type: "ADD", payload: product });
   };
   return (

@@ -22,7 +22,6 @@ export default function ShoppingCartPageComp() {
     navigate("/checkout");
   };
   const deleteFomCart = (id) => {
-    console.log("deletee");
     dispatch({ type: "DELETE", payload: id });
   };
 
@@ -35,10 +34,10 @@ export default function ShoppingCartPageComp() {
       {totalPrice > 0 && <h3>Shopping Cart:</h3>}
       <table style={{ width: "70%" }}>
         <thead></thead>
-        {cartProducts.map((product, index) => {
-          return (
-            <tbody key={index}>
-              <tr style={{ borderRadius: "10px" }}>
+        <tbody>
+          {cartProducts.map(product => {
+            return (
+              <tr key={product.id} style={{ borderRadius: "10px" }}>
                 <td style={{ width: "20%" }}>
                   <img
                     src={product.thumbnail}
@@ -68,9 +67,9 @@ export default function ShoppingCartPageComp() {
                   </button>
                 </td>
               </tr>
-            </tbody>
-          );
-        })}
+            );
+          })}
+        </tbody>
       </table>
 
       {totalPrice > 0 && <p>Total: ${totalPrice}</p>}
