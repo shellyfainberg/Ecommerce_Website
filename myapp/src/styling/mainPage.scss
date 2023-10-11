@@ -1,0 +1,51 @@
+.mainPage-wrapper {
+  button {
+    width: unset;
+    color: black;
+  }
+  display: flex;
+  width: calc(100vw - 40px);
+  justify-content: space-between;
+  background-color: rgb(63, 44, 168);
+  padding: 0 20px;
+  .cart-wrapper {
+    display: flex;
+    position: relative;
+    align-items: center;
+    img {
+      width: 30px;
+      filter: brightness(0) invert(1);
+    }
+    .counter {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      left: 65%;
+      bottom: 57%;
+      background-color: #fff;
+      border-radius: 50%;
+      width: 16px;
+      height: 16px;
+      text-align: center;
+      font-size: 12px;
+      &.jump{
+        animation: jump 0.7s forwards ease-in;
+        transition: transform 0.7s ease-in-out;
+  
+        @keyframes jump {
+          0% {
+            transform: translateY(0);
+          }
+          50% {
+            transform: translateY(-5px);
+          }
+          100% {
+            transform: translateY(0);
+          }
+        }
+      }
+    
+    }
+  }
+}

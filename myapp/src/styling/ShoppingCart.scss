@@ -1,0 +1,17 @@
+.Page-wrapper{
+    table{
+        border-collapse:collapse;
+        // border-collapse: separate !important;
+        tr{
+            margin: 5px;
+            border-bottom: 1px solid #CACACA;
+            // border-radius: 10px;
+            // outline: thin solid;
+            // border-bottom: 1pt solid black;
+            td{
+                padding: 7px;
+            }
+
+        }
+    }
+}
